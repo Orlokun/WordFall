@@ -6,15 +6,19 @@ using UnityEngine;
 
 public class Word
 {
+    private WordDisplay wDisplay;
     public WordManager wManager;
     public string word;
     private int typeIndex;
 
-    public Word(string _word, WordManager _wManager)
+    public Word(string _word, WordManager _wManager, WordDisplay _wDisplay)
     {
         word = _word;
         typeIndex = 0;
         wManager = _wManager;
+        wDisplay = _wDisplay;
+        wDisplay.SetWord(word);
+
     }
 
     public char GetNextLetter()

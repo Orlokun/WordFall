@@ -9,6 +9,7 @@ public class WordManager : MonoBehaviour {
     public List<Word> wordsReady;
     public List<Word> mistakenWords;
 
+    public WordSpawner wSpawner;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class WordManager : MonoBehaviour {
 
     public void AddWord()
     {
-        Word word = new Word(WordGenerator.GetRandomWord(), this);
+        Word word = new Word(WordGenerator.GetRandomWord(), this, wSpawner.SpawnWord());
         wordList.Add(word);
     }
 
