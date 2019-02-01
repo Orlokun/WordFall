@@ -31,7 +31,7 @@ public class Word
     public void ResetWord()
     {
         typeIndex = 0;
-        wManager.RemoveActiveWord(this);
+        wManager.mistakenWords.Add(this);
     }
 
     public bool IsReady()

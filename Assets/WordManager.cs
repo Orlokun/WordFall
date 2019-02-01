@@ -7,6 +7,7 @@ public class WordManager : MonoBehaviour {
     public List<Word> wordList;
     public List<Word> activeWordList;
     public List<Word> wordsReady;
+    public List<Word> mistakenWords;
 
 
     private void Start()
@@ -42,7 +43,7 @@ public class WordManager : MonoBehaviour {
                     word.ResetWord();
                 }
             }
-
+            RemoveActiveWrongTypedWords();
         }
         else
         {
@@ -66,12 +67,11 @@ public class WordManager : MonoBehaviour {
                     wordsReady.Add(word);
                 }
             }
-
-            CleanActiveWordList();
+            CleanActiveCompleteWords();
         }
     }
 
-    public void CleanActiveWordList()
+    public void CleanActiveCompleteWords()
     {
         foreach (Word word in wordsReady)
         {
@@ -81,5 +81,17 @@ public class WordManager : MonoBehaviour {
             }
         }
         wordsReady.Clear();
+    }
+
+    public void RemoveActiveWrongTypedWords()
+    {
+        foreach (Word word in mistakenWords)
+        {
+            if (activeWordList.Contains(word))
+            {
+                activeWordList.Remove(word);
+            }
+        }
+        mistakenWords.Clear();
     }
 }
