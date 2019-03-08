@@ -8,15 +8,10 @@ public class WordManager : MonoBehaviour {
     public List<Word> activeWordList;
     public List<Word> wordsReady;
     public List<Word> mistakenWords;
-
+    public List<string> wordsPassed;
+    public int score = 0;
     public WordSpawner wSpawner;
 
-    private void Start()
-    {
-        AddWord();
-        AddWord();
-        AddWord();
-    }
 
     public void AddWord()
     {
@@ -64,8 +59,10 @@ public class WordManager : MonoBehaviour {
             {
                 if (word.IsReady())
                 {
+                    score += word.score;
                     wordList.Remove(word);
                     wordsReady.Add(word);
+                    SaveInSystem();
                 }
             }
             CleanActiveCompleteWords();
@@ -79,9 +76,25 @@ public class WordManager : MonoBehaviour {
             if (activeWordList.Contains(word))
             {
                 activeWordList.Remove(word);
+                word.wDisplay.RemoveWord();
             }
         }
+
+        SaveWordsReady();
         wordsReady.Clear();
+    }
+
+    public void SaveInSystem()
+    {
+        ScoreSaver.SaveData(this);
+    }
+
+    public void SaveWordsReady()
+    {
+        foreach (Word word in wordsReady)
+        {
+            wordsPassed.Add(word.word);
+        }
     }
 
     public void RemoveActiveWrongTypedWords()

@@ -81,6 +81,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PlayerData.cs" />
+    <Compile Include="Assets\ScoreSaver.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -120,6 +122,7 @@
     <Compile Include="Assets\WordInput.cs" />
     <Compile Include="Assets\WordManager.cs" />
     <Compile Include="Assets\WordSpawner.cs" />
+    <Compile Include="Assets\WordTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />

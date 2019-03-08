@@ -6,10 +6,11 @@ using UnityEngine;
 
 public class Word
 {
-    private WordDisplay wDisplay;
+    public WordDisplay wDisplay;
     public WordManager wManager;
     public string word;
     private int typeIndex;
+    public int score; 
 
     public Word(string _word, WordManager _wManager, WordDisplay _wDisplay)
     {
@@ -18,6 +19,7 @@ public class Word
         wManager = _wManager;
         wDisplay = _wDisplay;
         wDisplay.SetWord(word);
+        wDisplay.SetWordSizeAndColor();
 
     }
 
@@ -29,13 +31,14 @@ public class Word
     public void TypeLetter()
     {
         typeIndex++;
-        //Removeletter onscreen
+        wDisplay.RemoveLetter();
     }
 
     public void ResetWord()
     {
         typeIndex = 0;
         wManager.mistakenWords.Add(this);
+        wDisplay.RestartWordDisplay();
     }
 
     public bool IsReady()

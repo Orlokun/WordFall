@@ -5,9 +5,9 @@ using UnityEngine;
 public class WordGenerator : MonoBehaviour {
 
 
-    public static string[] wordList = { "babyPenguin", "lomito", "churrasco", "mouse", "parlante", "luchoJara",
-                                        "estricto", "fiscal", "desnudo",
-                                        "aburrido", "contodo", "dale", "pf" };
+    public static string[] wordList = { "baby Penguin", "lomito", "churrasco", "mouse", "parlante", "lucho jara",
+                                        "estricto", "fiscal", "desnudo", "camión", "mansión", "bolígrafo", "&;:",
+                                        "aburrido", "con todo", "dale", "pf" };
                                        
 
     public static string GetRandomWord()
