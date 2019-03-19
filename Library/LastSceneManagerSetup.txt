@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/WordFall.unity
+- path: Assets/Escenas/Intro Scene.unity
   isLoaded: 1
   isActive: 1

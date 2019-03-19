@@ -81,8 +81,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\PlayerData.cs" />
-    <Compile Include="Assets\ScoreSaver.cs" />
+    <Compile Include="Assets\Scripts\MainSceneCanvas.cs" />
+    <Compile Include="Assets\Scripts\MainSceneController.cs" />
+    <Compile Include="Assets\Scripts\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\ScoreSaver.cs" />
+    <Compile Include="Assets\Scripts\Word.cs" />
+    <Compile Include="Assets\Scripts\WordDisplay.cs" />
+    <Compile Include="Assets\Scripts\WordGenerator.cs" />
+    <Compile Include="Assets\Scripts\WordInput.cs" />
+    <Compile Include="Assets\Scripts\WordManager.cs" />
+    <Compile Include="Assets\Scripts\WordSpawner.cs" />
+    <Compile Include="Assets\Scripts\WordTimer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -116,15 +125,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
-    <Compile Include="Assets\Word.cs" />
-    <Compile Include="Assets\WordDisplay.cs" />
-    <Compile Include="Assets\WordGenerator.cs" />
-    <Compile Include="Assets\WordInput.cs" />
-    <Compile Include="Assets\WordManager.cs" />
-    <Compile Include="Assets\WordSpawner.cs" />
-    <Compile Include="Assets\WordTimer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\PalabrasEtapa1.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
