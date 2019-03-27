@@ -8,6 +8,9 @@ public class MainSceneCanvas : MonoBehaviour {
     private MainSceneController msController;
     public GameObject[] availableStages;
     public GameObject[] mainSceneObjects;
+    public GameObject[] beachDif;
+    public GameObject[] metroDif;
+
 
 
     // Use this for initialization
@@ -49,6 +52,17 @@ public class MainSceneCanvas : MonoBehaviour {
         {
             ToggleCanvasObject(gObject, false);
         }
+
+        foreach (GameObject gObject in beachDif)
+        {
+            ToggleCanvasObject(gObject, false);
+        }
+
+        foreach (GameObject gObject in metroDif)
+        {
+            ToggleCanvasObject(gObject, false);
+        }
+
     }
 
     public void ActivateStageSelectionCanvas()
@@ -64,6 +78,27 @@ public class MainSceneCanvas : MonoBehaviour {
         foreach (GameObject gObject in mainSceneObjects)
         {
             ToggleCanvasObject(gObject, switchStatus);
+        }
+    }
+
+    public void ToggeDifficultyButtons(bool switchStatus, int stage)
+    {
+        switch(stage)
+        {
+            case 0:
+                foreach (GameObject gObject in beachDif)
+                {
+                    ToggleCanvasObject(gObject, switchStatus);
+                }
+                break;
+            case 1:
+                foreach (GameObject gObject in metroDif)
+                {
+                    ToggleCanvasObject(gObject, switchStatus);
+                }
+                break;
+            default:
+                return;
         }
     }
 

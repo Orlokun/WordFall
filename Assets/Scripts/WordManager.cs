@@ -11,7 +11,7 @@ public class WordManager : MonoBehaviour {
     public List<string> wordsPassed;
     public int score = 0;
     public WordSpawner wSpawner;
-
+    public AudioClipsManager aManager;
 
     public void AddWord()
     {
@@ -36,6 +36,7 @@ public class WordManager : MonoBehaviour {
                 }
                 else
                 {
+                    PlayWrongSound();
                     word.ResetWord();
                 }
             }
@@ -59,10 +60,11 @@ public class WordManager : MonoBehaviour {
             {
                 if (word.IsReady())
                 {
+                    PlayReadyAudio();
                     score += word.score;
                     wordList.Remove(word);
                     wordsReady.Add(word);
-                    SaveInSystem();
+                    //SaveInSystem();
                 }
             }
             CleanActiveCompleteWords();
@@ -96,6 +98,17 @@ public class WordManager : MonoBehaviour {
             wordsPassed.Add(word.word);
         }
     }
+
+    public void PlayReadyAudio()
+    {
+        aManager.PlayGoodSound();
+    }
+
+    public void PlayWrongSound()
+    {
+        aManager.PlayErrorSound();
+    }
+
 
     public void RemoveActiveWrongTypedWords()
     {

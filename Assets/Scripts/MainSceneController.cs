@@ -17,6 +17,11 @@ public class MainSceneController : MonoBehaviour
         msCanvas.DeactivateStageSelectionCanvas();
     }
 
+    public void ChangeDifficulty(int dif)
+    {
+        Difficulty.difficulty = dif;
+    }
+
     public void ChangeScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
@@ -26,6 +31,13 @@ public class MainSceneController : MonoBehaviour
     {
         msCanvas.ToggleMainSceneCanvas(false);
         msCanvas.ActivateStageSelectionCanvas();
+        msCanvas.ToggeDifficultyButtons(false, 0);
+        msCanvas.ToggeDifficultyButtons(false, 1);
+    }
+
+    public void DisplayDifficulty(int level)
+    {
+        msCanvas.ToggeDifficultyButtons(true, level);
     }
 
 
