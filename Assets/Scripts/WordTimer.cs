@@ -25,18 +25,18 @@ public class WordTimer : MonoBehaviour {
 
     private void SetWordTimerDelay()
     {
-        switch(Difficulty.difficulty)
+        switch(Difficulty.GetDifficulty())
         {
             case 1:
-                nextWordTime = 3.5f;
+                wordDelay = 3.5f;
                 Debug.Log("Delay is: " + nextWordTime);
                 break;
             case 2:
-                nextWordTime = 2.5f;
+                wordDelay = 2.5f;
                 Debug.Log("Delay is: " + nextWordTime);
                 break;
             case 3:
-                nextWordTime = 1.5f;
+                wordDelay = 1.5f;
                 Debug.Log("Delay is: " + nextWordTime);
                 break;
         }

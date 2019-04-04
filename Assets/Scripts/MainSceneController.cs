@@ -19,7 +19,7 @@ public class MainSceneController : MonoBehaviour
 
     public void ChangeDifficulty(int dif)
     {
-        Difficulty.difficulty = dif;
+        Difficulty.SetDifficulty(dif);
     }
 
     public void ChangeScene(string sceneName)

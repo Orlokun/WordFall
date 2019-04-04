@@ -81,6 +81,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AvatarController.cs" />
     <Compile Include="Assets\Scripts\AudioClipsManager.cs" />
     <Compile Include="Assets\Scripts\Difficulty.cs" />
     <Compile Include="Assets\Scripts\MainSceneCanvas.cs" />

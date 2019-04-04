@@ -12,6 +12,7 @@ public class WordManager : MonoBehaviour {
     public int score = 0;
     public WordSpawner wSpawner;
     public AudioClipsManager aManager;
+    private AvatarController avatarController;
 
     public void AddWord()
     {
@@ -71,6 +72,11 @@ public class WordManager : MonoBehaviour {
         }
     }
 
+    public void PlayAvatarAnimation()
+    {
+        
+    }
+
     public void CleanActiveCompleteWords()
     {
         foreach (Word word in wordsReady)
@@ -97,6 +103,12 @@ public class WordManager : MonoBehaviour {
         {
             wordsPassed.Add(word.word);
         }
+    }
+
+    public void PlayTypeWriterSound()
+    {
+        AudioClipsManager aManager = FindObjectOfType<AudioClipsManager>();
+        aManager.PlayTypeWriterSound();
     }
 
     public void PlayReadyAudio()

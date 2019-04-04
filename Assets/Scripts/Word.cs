@@ -32,6 +32,8 @@ public class Word
     {
         typeIndex++;
         wDisplay.RemoveLetter();
+        wManager.PlayTypeWriterSound();
+
     }
 
     public void ResetWord()
